@@ -25,8 +25,8 @@ opt.inccommand = 'split'
 opt.ignorecase = true
 opt.smarttab = true
 opt.breakindent = true
-opt.shiftwidth = 4
-opt.tabstop = 4
+opt.shiftwidth = 2
+opt.tabstop = 2
 opt.ai = true -- autoident
 opt.si = true -- smart ident
 opt.cc = '80' -- vertical line
@@ -38,25 +38,19 @@ opt.undofile = true
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
-    pattern = '*',
-    command = 'set nopaste',
+  pattern = '*',
+  command = 'set nopaste',
 })
 
 -- Add asteriks in block comments
 opt.formatoptions:append { 'r' }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = {"*.py"},
+  callback = function(bufnr)
+      bufnr = bufnr or vim.api.nvim_get_current_buf()
+      vim.api.nvim_buf_set_option(bufnr, 'shiftwidth', 4)
+      vim.api.nvim_buf_set_option(bufnr, 'tabstop', 4)
+  end,
+})
