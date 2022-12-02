@@ -1,5 +1,10 @@
 {
     "python.linting.mypyEnabled": true,
     "python.linting.pylamaEnabled": true,
-    "git.enableGutters": true
+    "python.linting.pydocstyleEnabled": true,
+    "pyright.organizeimports.provider": "isort",
+    "pyright.testing.provider": "pytest",
+    "python.analysis.diagnosticMode": "workspace",
+    "git.enableGutters": true,
+    "git.enableGlobalStatus": true
 }
