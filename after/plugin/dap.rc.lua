@@ -19,3 +19,8 @@ keymap('n', '<leader>B', "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Bre
 keymap('n', '<leader>lp', "<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>", dap_config)
 keymap('n', '<leader>ro', "<cmd>lua require'dap'.repl.toggle()<cr>", dap_config)
 keymap('n', '<leader>rl', "<cmd>lua require'dap'.run_last()<cr>", dap_config)
+
+
+vim.fn.sign_define('DapBreakpoint', { text='🛑', texthl='', linehl='', numhl='' })
+vim.fn.sign_define('DapBreakpointCondition', { text='🛑C', texthl='', linehl='', numhl='' })
+vim.fn.sign_define('DapBreakpointCondition', { text='🛑R', texthl='', linehl='', numhl='' })
