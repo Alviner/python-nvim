@@ -23,4 +23,3 @@ keymap('n', '<leader>rl', "<cmd>lua require'dap'.run_last()<cr>", dap_config)
 
 vim.fn.sign_define('DapBreakpoint', { text='🛑', texthl='', linehl='', numhl='' })
 vim.fn.sign_define('DapBreakpointCondition', { text='🛑', texthl='', linehl='', numhl='' })
-vim.fn.sign_define('DapBreakpointCondition', { text='🛑', texthl='', linehl='', numhl='' })
