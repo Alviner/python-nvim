@@ -18,12 +18,3 @@ local keymap = vim.api.nvim_set_keymap
 keymap('n', '<leader>t', "<cmd>lua require'neotest'.run.run()<cr>", {})
 keymap('n', '<leader>T', "<cmd>lua require'neotest'.run.run(vim.fn.expand('%s'))<cr>", {})
 keymap('n', '<leader>d', "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", {})
-
-local dap = require('dap')
-dap.adapters.python = {
-  type = 'executable',
-  command = 'python',
-  args = { '-m', 'debugpy.adapter' },
-}
-
-keymap('n', '<F9>', "<cmd>lua require'dap'.toggle_breakpoint()<cr>", {})
