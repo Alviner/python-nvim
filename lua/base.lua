@@ -33,8 +33,6 @@ opt.cc = '80' -- vertical line
 opt.wrap = false -- no wrap
 opt.backspace = 'start,eol,indent'
 opt.undofile = true
--- opt.path:append {'**'}
--- opt.wildignore:append { '*/node_modules/*' }
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
