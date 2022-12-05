@@ -54,3 +54,14 @@ vim.api.nvim_create_autocmd('FileType', {
       vim.api.nvim_buf_set_option(bufnr, 'tabstop', 4)
   end,
 })
+
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = {"*.go"},
+  callback = function(bufnr)
+      bufnr = bufnr or vim.api.nvim_get_current_buf()
+      vim.api.nvim_buf_set_option(bufnr, 'shiftwidth', 4)
+      vim.api.nvim_buf_set_option(bufnr, 'tabstop', 4)
+      vim.api.nvim_buf_set_option(bufnr, 'expandtab', false)
+  end,
+})

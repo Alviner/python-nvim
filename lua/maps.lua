@@ -17,8 +17,8 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 
 -- Split panel
-keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
-keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
+keymap.set('n', 'xh', ':split<Return><C-w>w', { silent = true })
+keymap.set('n', 'xv', ':vsplit<Return><C-w>w', { silent = true })
 
 -- Pane navigation
 keymap.set('n', '<Space>', '<C-w>w')
