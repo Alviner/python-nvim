@@ -40,3 +40,5 @@ keymap.set('n', '<leader>q', ':bd<Return>', { silent = true })
 keymap.set('n', '<leader>re', ':diffg RE<Return>', { silent = true })
 keymap.set('n', '<leader>ba', ':diffg BA<Return>', { silent = true })
 keymap.set('n', '<leader>lo', ':diffg LO<Return>', { silent = true })
+
+keymap.set('n', '<leader>gg', ':LazyGit<Return>', { silent = true })
