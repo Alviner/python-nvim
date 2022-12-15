@@ -17,4 +17,6 @@ neotest.setup {
 local keymap = vim.api.nvim_set_keymap
 keymap('n', '<leader>t', "<cmd>lua require'neotest'.run.run()<cr>", {})
 keymap('n', '<leader>T', "<cmd>lua require'neotest'.run.run(vim.fn.expand('%s'))<cr>", {})
+keymap('n', '<leader>ta', "<cmd>lua require'neotest'.run.run('tests')<cr>", {})
+keymap('n', '<leader>p', "<cmd>lua require'neotest'.summary.toggle()<cr>", {})
 keymap('n', '<leader>d', "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", {})

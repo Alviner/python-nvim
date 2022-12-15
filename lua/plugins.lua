@@ -55,4 +55,5 @@ packer.startup(function(use)
         'nvim-neotest/neotest-python'
       }
     }
+    use 'kdheepak/lazygit.nvim'
 end)
