@@ -1,8 +1,16 @@
 {
-    "python.linting.mypyEnabled": true,
-    "python.linting.pylamaEnabled": true,
-    "pyright.organizeimports.provider": "isort",
-    "pyright.testing.provider": "pytest",
-    "git.enableGutters": true,
-    "snippets.ultisnips.pythonPrompt": false,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylamaEnabled": true,
+  "pyright.organizeimports.provider": "isort",
+  "pyright.testing.provider": "pytest",
+  "git.enableGutters": true,
+  "snippets.ultisnips.pythonPrompt": false,
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {}
+    }
+  }
 }
