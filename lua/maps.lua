@@ -1,7 +1,8 @@
 local keymap = vim.keymap
 
--- Do not yank with x
+-- Do not yank with replacement/changing/deleting
 keymap.set('n', 'x', '"_x')
+keymap.set('n', 'c', '"_c')
 
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
@@ -17,8 +18,8 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 
 -- Split panel
-keymap.set('n', 'xh', ':split<Return><C-w>w', { silent = true })
-keymap.set('n', 'xv', ':vsplit<Return><C-w>w', { silent = true })
+keymap.set('n', 'sh', ':split<Return><C-w>w', { silent = true })
+keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
 
 -- Pane navigation
 keymap.set('n', '<Space>', '<C-w>w')
